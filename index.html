@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winfly Ventures — Event Production for Government & Corporate India</title>
+<meta name="description" content="A senior-led event production studio working with the Government of India and the country's largest private institutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Always-on animated background -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-blob b1"></div>
+  <div class="bg-blob b2"></div>
+</div>
+
+<!-- Site-wide snow drift -->
+<div class="snow" aria-hidden="true">
+  <div class="flake" style="--x: 4%;  --d: 16s; --de: 0s;  --s: 2px"></div>
+  <div class="flake" style="--x: 11%; --d: 22s; --de: 3s;  --s: 3px"></div>
+  <div class="flake" style="--x: 18%; --d: 18s; --de: 6s;  --s: 2px"></div>
+  <div class="flake" style="--x: 26%; --d: 26s; --de: 1s;  --s: 4px"></div>
+  <div class="flake" style="--x: 34%; --d: 14s; --de: 8s;  --s: 2px"></div>
+  <div class="flake" style="--x: 42%; --d: 20s; --de: 4s;  --s: 3px"></div>
+  <div class="flake" style="--x: 50%; --d: 24s; --de: 11s; --s: 2px"></div>
+  <div class="flake" style="--x: 58%; --d: 17s; --de: 7s;  --s: 3px"></div>
+  <div class="flake" style="--x: 66%; --d: 21s; --de: 2s;  --s: 2px"></div>
+  <div class="flake" style="--x: 74%; --d: 19s; --de: 9s;  --s: 4px"></div>
+  <div class="flake" style="--x: 82%; --d: 25s; --de: 5s;  --s: 2px"></div>
+  <div class="flake" style="--x: 90%; --d: 15s; --de: 12s; --s: 3px"></div>
+  <div class="flake" style="--x: 96%; --d: 23s; --de: 0s;  --s: 2px"></div>
+</div>
+
+<div class="progress-bar"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="#" class="logo" data-cursor="Top">Winfly<span class="dot"></span>Ventures</a>
+  <ul class="nav-links">
+    <li><a href="#studio">Studio</a></li>
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Mandate</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Begin a brief →</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-mark">
+    <svg viewBox="0 0 400 300" class="igloo-scene" aria-hidden="true">
+      <!-- Stars in sky -->
+      <circle cx="40"  cy="40"  r="1"   class="scene-stars"/>
+      <circle cx="110" cy="25"  r="1.4" class="scene-stars bright"/>
+      <circle cx="180" cy="55"  r="1"   class="scene-stars"/>
+      <circle cx="240" cy="32"  r="1.2" class="scene-stars"/>
+      <circle cx="320" cy="48"  r="1"   class="scene-stars"/>
+      <circle cx="370" cy="22"  r="1.4" class="scene-stars bright"/>
+      <circle cx="65"  cy="80"  r="1"   class="scene-stars"/>
+      <circle cx="280" cy="75"  r="1"   class="scene-stars"/>
+
+      <!-- Distant mountain range (far) -->
+      <path d="M 0,200 L 50,140 L 100,180 L 150,120 L 210,170 L 260,130 L 320,165 L 370,125 L 400,175 L 400,230 L 0,230 Z"
+            class="scene-mountains-far"/>
+
+      <!-- Mid mountain range -->
+      <path d="M 0,230 L 60,180 L 130,215 L 200,175 L 280,210 L 360,180 L 400,220 L 400,250 L 0,250 Z"
+            class="scene-mountains-near"/>
+
+      <!-- Horizon -->
+      <line x1="0" y1="248" x2="400" y2="248" class="scene-horizon"/>
+
+      <!-- Back igloo (smaller, behind, blends into bg) -->
+      <g class="igloo-back">
+        <ellipse cx="80" cy="252" rx="40" ry="2" fill="#0d0d0d" opacity="0.4"/>
+        <path d="M 40,250 A 40,40 0 0,1 120,250 Z" class="igloo-back-fill"/>
+        <path d="M 50,250 A 30,30 0 0,1 110,250" class="igloo-back-brick"/>
+        <path d="M 60,250 A 20,20 0 0,1 100,250" class="igloo-back-brick"/>
+        <line x1="68" y1="237" x2="68" y2="248" class="igloo-back-brick"/>
+        <line x1="92" y1="237" x2="92" y2="248" class="igloo-back-brick"/>
+        <line x1="80" y1="223" x2="80" y2="234" class="igloo-back-brick"/>
+        <path d="M 40,250 A 40,40 0 0,1 120,250" class="igloo-back-stroke"/>
+        <path d="M 70,250 L 70,242 A 10,8 0 0,1 90,242 L 90,250 Z" class="igloo-back-entrance"/>
+      </g>
+
+      <!-- Foreground main igloo -->
+      <g class="igloo-main">
+        <ellipse cx="240" cy="262" rx="92" ry="4" fill="#000000" opacity="0.5"/>
+
+        <!-- Filled dome -->
+        <path d="M 145,260 A 95,95 0 0,1 335,260 Z" class="igloo-main-fill"/>
+
+        <!-- Concentric brick rows -->
+        <path d="M 165,260 A 75,75 0 0,1 315,260" class="igloo-brick"/>
+        <path d="M 185,260 A 55,55 0 0,1 295,260" class="igloo-brick"/>
+        <path d="M 205,260 A 35,35 0 0,1 275,260" class="igloo-brick"/>
+
+        <!-- Brick joint pattern (staggered between rows) -->
+        <line x1="180" y1="240" x2="178" y2="258" class="igloo-brick"/>
+        <line x1="218" y1="240" x2="218" y2="258" class="igloo-brick"/>
+        <line x1="262" y1="240" x2="263" y2="258" class="igloo-brick"/>
+        <line x1="302" y1="240" x2="302" y2="258" class="igloo-brick"/>
+
+        <line x1="200" y1="225" x2="200" y2="240" class="igloo-brick"/>
+        <line x1="240" y1="222" x2="240" y2="240" class="igloo-brick"/>
+        <line x1="280" y1="225" x2="280" y2="240" class="igloo-brick"/>
+
+        <line x1="220" y1="207" x2="220" y2="222" class="igloo-brick"/>
+        <line x1="260" y1="207" x2="260" y2="222" class="igloo-brick"/>
+
+        <line x1="240" y1="172" x2="240" y2="207" class="igloo-brick"/>
+
+        <!-- Outer dome stroke -->
+        <path d="M 145,260 A 95,95 0 0,1 335,260" class="igloo-main-stroke"/>
+
+        <!-- Glowing window (left side) -->
+        <ellipse cx="195" cy="230" rx="8" ry="10" class="igloo-window"/>
+        <ellipse cx="195" cy="230" rx="8" ry="10" fill="none" stroke="#0d0d0d" stroke-width="1"/>
+
+        <!-- Entrance archway (dark) -->
+        <path d="M 222,260 L 222,240 A 18,15 0 0,1 258,240 L 258,260 Z" class="igloo-entrance-fill"/>
+        <path d="M 222,260 L 222,240 A 18,15 0 0,1 258,240 L 258,260" class="igloo-entrance-stroke"/>
+
+        <!-- Aerial pole + glowing dot -->
+        <line x1="240" y1="172" x2="240" y2="155" class="igloo-aerial"/>
+        <circle cx="240" cy="151" r="4.5" class="igloo-dot"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-top">
+    <div class="hero-tag"><span class="pulse"></span> Live · <span id="clock">--:--:--</span> IST</div>
+    <p class="hero-side">A senior-led practice for the Government of India and the country's largest private institutions.</p>
+  </div>
+
+  <h1>Events of <span class="accent">consequence,</span><br>produced with intent.</h1>
+
+  <div class="hero-meta">
+    <div data-cursor="Read">
+      <span>Discipline</span>
+      <strong>Event Production</strong>
+    </div>
+    <div data-cursor="Read">
+      <span>Based</span>
+      <strong>Indore, India</strong>
+    </div>
+    <div data-cursor="Read">
+      <span>Established</span>
+      <strong>2009</strong>
+    </div>
+    <div data-cursor="Read">
+      <span>Selected</span>
+      <strong>G20 · BSE · ISRO</strong>
+    </div>
+  </div>
+</section>
+
+<!-- Live ticker -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span><i class="t-dot"></i> Now producing — Q3 2026</span>
+    <span><i class="t-dot"></i> Live from Indore · GMT+5:30</span>
+    <span><i class="t-dot"></i> Accepting 2026 briefs</span>
+    <span><i class="t-dot"></i> 17 yrs · 800+ events · 14 heads of state</span>
+    <span><i class="t-dot"></i> Senior-led · By appointment only</span>
+    <span><i class="t-dot"></i> Now producing — Q3 2026</span>
+    <span><i class="t-dot"></i> Live from Indore · GMT+5:30</span>
+    <span><i class="t-dot"></i> Accepting 2026 briefs</span>
+    <span><i class="t-dot"></i> 17 yrs · 800+ events · 14 heads of state</span>
+    <span><i class="t-dot"></i> Senior-led · By appointment only</span>
+  </div>
+</div>
+
+<!-- Marquee 1 -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>State Functions</span>
+    <span>Diplomatic Receptions</span>
+    <span>Investor Days</span>
+    <span>Bilateral Summits</span>
+    <span>Product Launches</span>
+    <span>PSU Conclaves</span>
+    <span>Annual General Meetings</span>
+    <span>State Functions</span>
+    <span>Diplomatic Receptions</span>
+    <span>Investor Days</span>
+    <span>Bilateral Summits</span>
+    <span>Product Launches</span>
+    <span>PSU Conclaves</span>
+    <span>Annual General Meetings</span>
+  </div>
+</div>
+
+<!-- Manifesto -->
+<section class="manifesto" id="studio">
+  <div class="label reveal">A studio, not an agency</div>
+  <h2 class="reveal">For nearly two decades, we have produced India's <span class="underline">most consequential gatherings</span> — moments where policy is announced, capital is raised, and reputations are made. The work answers to a single standard: <span class="accent">flawless execution, every time.</span></h2>
+</section>
+
+<!-- Capabilities -->
+<section id="capabilities">
+  <div class="label reveal">Capabilities · 06 Disciplines</div>
+  <div class="cap-grid">
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">01</div>
+      <h3>Government<br>& State</h3>
+      <p>Bilateral summits, ministerial conclaves, foundation ceremonies. Protocol fluency, security clearance.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">02</div>
+      <h3>Corporate<br>& Investor</h3>
+      <p>AGMs, board offsites, investor days, earnings calls — for India's listed leadership.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">03</div>
+      <h3>Diplomatic<br>& Embassy</h3>
+      <p>National Day events, head-of-mission receptions, trade delegations across Lutyens' Delhi.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">04</div>
+      <h3>Conferences<br>& Conclaves</h3>
+      <p>Multi-day flagship summits — economic, scientific, policy. From a hundred to twelve thousand delegates.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">05</div>
+      <h3>Product<br>& Brand Launches</h3>
+      <p>Concept-led launches for marquee brands. Story first, spectacle in service of it.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+    <a href="#contact" class="cap reveal" data-cursor="Brief">
+      <div class="cap-num">06</div>
+      <h3>PSU<br>& Defence</h3>
+      <p>Commissioning ceremonies, jubilees, stakeholder events. Cleared, credentialled, discreet.</p>
+      <div class="cap-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- Work strip -->
+<div class="work-section" id="work">
+  <div class="label reveal">Selected Work · 2019 — 2025</div>
+  <div class="work-head reveal">
+    <h2>Some rooms<br>we are <span class="accent">permitted</span> to name.</h2>
+    <div class="work-hint"><span class="dot"></span>Drag · Scroll · 08 Mandates</div>
+  </div>
+  <div class="work-strip">
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-1"></div>
+      <div class="work-info">
+        <span class="work-tag">Government</span>
+        <h3>The Bharat Investment Summit</h3>
+        <span>Ministry of Finance · 2024 · 2,400 Delegates</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-2"></div>
+      <div class="work-info">
+        <span class="work-tag">Diplomatic</span>
+        <h3>G20 Sherpa Track</h3>
+        <span>New Delhi · 2023 · 19 Delegations</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-5"></div>
+      <div class="work-info">
+        <span class="work-tag">Corporate</span>
+        <h3>Reliance Annual General Meeting</h3>
+        <span>Jio World Centre · 2024 · 11M Concurrent</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-3"></div>
+      <div class="work-info">
+        <span class="work-tag">Government</span>
+        <h3>Chandrayaan Reception</h3>
+        <span>Rashtrapati Bhavan · 2023</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-4"></div>
+      <div class="work-info">
+        <span class="work-tag">Launch</span>
+        <h3>Mahindra BE.6 Reveal</h3>
+        <span>Yelahanka Air Base · 2024</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-6"></div>
+      <div class="work-info">
+        <span class="work-tag">Corporate</span>
+        <h3>Tata Centennial Gala</h3>
+        <span>Bombay House · 2023</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-7"></div>
+      <div class="work-info">
+        <span class="work-tag">Conference</span>
+        <h3>India Energy Week</h3>
+        <span>Goa · 2024 · 16,000 Delegates</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-8"></div>
+      <div class="work-info">
+        <span class="work-tag">Government</span>
+        <h3>BSE @ 150</h3>
+        <span>NSE Hall · 2024</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Stats — orange punch -->
+<div class="stats-section">
+  <div class="label">By the numbers</div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num" data-target="17" data-suffix="+">0</div>
+      <div class="stat-label">Years Operating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="800" data-suffix="+">0</div>
+      <div class="stat-label">Events Delivered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="42" data-suffix="">0</div>
+      <div class="stat-label">Cities Operated</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="14" data-suffix="">0</div>
+      <div class="stat-label">Heads of State Hosted</div>
+    </div>
+  </div>
+</div>
+
+<!-- Approach -->
+<section class="approach-section">
+  <div class="label reveal">Approach · 05 Steps</div>
+  <div class="approach">
+    <div class="approach-intro reveal">
+      <h2>The brief is the brief. The room is the room. <span class="accent">Everything in between is our work.</span></h2>
+      <p>We do not subcontract judgment. Every mandate is led by a senior partner from first call to final invoice.</p>
+    </div>
+    <ul class="steps">
+      <li class="step reveal">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Mandate</h3>
+          <p>We listen first. To the brief, to the unsaid, to the political and reputational stakes that frame it.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Architecture</h3>
+          <p>A document — narrative, not a deck. Venue, minute-by-minute programme, risk register, escalation matrix.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Production</h3>
+          <p>Design, fabrication, technology, hospitality. Built to a standard that survives an unannounced visit at 0500.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Show</h3>
+          <p>The day itself. Dual control rooms, one principal point of contact, no surprises that have not been rehearsed.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step-num">05</div>
+        <div>
+          <h3>Reckoning</h3>
+          <p>Within seven days: a written debrief, a clean financial close, an honest list of what we would do differently.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Clients marquee -->
+<div class="clients">
+  <div class="clients-track">
+    <span class="client">Ministry of External Affairs</span><span class="client-dot"></span>
+    <span class="client">Tata Sons</span><span class="client-dot"></span>
+    <span class="client">Reliance Industries</span><span class="client-dot"></span>
+    <span class="client">NITI Aayog</span><span class="client-dot"></span>
+    <span class="client">ISRO</span><span class="client-dot"></span>
+    <span class="client">Bombay Stock Exchange</span><span class="client-dot"></span>
+    <span class="client">HDFC Bank</span><span class="client-dot"></span>
+    <span class="client">Embassy of France</span><span class="client-dot"></span>
+    <span class="client">Mahindra Group</span><span class="client-dot"></span>
+    <span class="client">Adani Group</span><span class="client-dot"></span>
+    <span class="client">DRDO</span><span class="client-dot"></span>
+    <span class="client">Infosys</span><span class="client-dot"></span>
+    <span class="client">Ministry of External Affairs</span><span class="client-dot"></span>
+    <span class="client">Tata Sons</span><span class="client-dot"></span>
+    <span class="client">Reliance Industries</span><span class="client-dot"></span>
+    <span class="client">NITI Aayog</span><span class="client-dot"></span>
+    <span class="client">ISRO</span><span class="client-dot"></span>
+    <span class="client">Bombay Stock Exchange</span><span class="client-dot"></span>
+  </div>
+</div>
+
+<!-- Testimonial -->
+<section class="testimonial">
+  <div class="label reveal">In their words</div>
+  <blockquote class="reveal">"They produced a state visit reception attended by three heads of government. The brief was complex, the timeline unforgiving, the protocol non-negotiable. Winfly Ventures treated every requirement <span class="accent">as a non-event.</span> That is the highest compliment we can give."</blockquote>
+  <cite class="reveal">— <strong>Joint Secretary</strong>, Ministry of External Affairs · Government of India</cite>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 class="reveal">A brief, a date,<br>a <span class="accent">room to fill.</span></h2>
+  <a href="mailto:mandate@winflyventures.com" class="cta-button reveal">
+    <span>Begin a Mandate</span>
+    <span class="arrow">→</span>
+  </a>
+  <div class="cta-meta reveal">mandate@winflyventures.com &nbsp;·&nbsp; +91 22 4000 0000 &nbsp;·&nbsp; By appointment only</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-tag">Winfly<span class="dot"></span>Ventures</div>
+      <p class="footer-blurb">A senior-led event production studio working with the Government of India and the country's largest private institutions.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#studio">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#work">Work</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li>Indore, India</li>
+        <li>Madhya Pradesh 452001</li>
+        <li>GMT+5:30 IST</li>
+        <li>Mon — Sat</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:mandate@winflyventures.com">mandate@winflyventures.com</a></li>
+        <li><a href="mailto:press@winflyventures.com">press@winflyventures.com</a></li>
+        <li>+91 22 4000 0000</li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-mark">Winfly <span class="accent">Ventures</span></div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Winfly Ventures Pvt. Ltd. · CIN: U74999MH2009PTC000000</div>
+    <div>Crafted in Mumbai</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
