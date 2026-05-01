@@ -19,7 +19,14 @@
       "Bash(curl -sI https://event-management-six-delta.vercel.app/)",
       "Bash(curl -s https://event-management-six-delta.vercel.app/)",
       "Bash(curl -s -o /dev/null -w \"html: %{http_code}\\\\ncss:  %{http_code}\\\\n\" https://event-management-six-delta.vercel.app/styles.css)",
-      "Bash(curl -s -o /dev/null -w \"js:   %{http_code}\\\\n\" https://event-management-six-delta.vercel.app/script.js)"
+      "Bash(curl -s -o /dev/null -w \"js:   %{http_code}\\\\n\" https://event-management-six-delta.vercel.app/script.js)",
+      "Bash(curl -sf https://event-management-six-delta.vercel.app/)",
+      "WebFetch(domain:www.x2ycreative.com)",
+      "Bash(python3 -m http.server 3000)",
+      "Bash(curl -sf -o /dev/null http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"html: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"css:  %{http_code}\\\\n\" http://localhost:3000/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"js:   %{http_code}\\\\n\" http://localhost:3000/script.js)"
     ]
   }
 }

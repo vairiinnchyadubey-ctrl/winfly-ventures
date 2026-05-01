@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winfly Ventures — Funky Light Edition</title>
+<meta name="description" content="Senior-led event production studio. Government, corporate, diplomatic. Indore, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- BG fx -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-blob b1"></div>
+  <div class="bg-blob b2"></div>
+</div>
+
+<!-- Brick drift -->
+<div class="confetti" aria-hidden="true">
+  <div class="confetto" style="--x: 4%;  --d: 18s; --de: 0s;   --w: 26px; --h: 13px"></div>
+  <div class="confetto" style="--x: 11%; --d: 22s; --de: 2.5s; --w: 22px; --h: 11px"></div>
+  <div class="confetto" style="--x: 18%; --d: 16s; --de: 5s;   --w: 28px; --h: 14px"></div>
+  <div class="confetto" style="--x: 26%; --d: 24s; --de: 1s;   --w: 24px; --h: 12px"></div>
+  <div class="confetto" style="--x: 33%; --d: 14s; --de: 8s;   --w: 20px; --h: 10px"></div>
+  <div class="confetto" style="--x: 40%; --d: 20s; --de: 3.5s; --w: 26px; --h: 13px"></div>
+  <div class="confetto" style="--x: 48%; --d: 26s; --de: 11s;  --w: 30px; --h: 15px"></div>
+  <div class="confetto" style="--x: 56%; --d: 17s; --de: 6.5s; --w: 22px; --h: 11px"></div>
+  <div class="confetto" style="--x: 64%; --d: 21s; --de: 2s;   --w: 24px; --h: 12px"></div>
+  <div class="confetto" style="--x: 72%; --d: 19s; --de: 9s;   --w: 28px; --h: 14px"></div>
+  <div class="confetto" style="--x: 80%; --d: 23s; --de: 4.5s; --w: 22px; --h: 11px"></div>
+  <div class="confetto" style="--x: 88%; --d: 15s; --de: 11.5s; --w: 26px; --h: 13px"></div>
+  <div class="confetto" style="--x: 95%; --d: 25s; --de: 0s;   --w: 24px; --h: 12px"></div>
+  <div class="confetto" style="--x: 8%;  --d: 17s; --de: 7s;   --w: 20px; --h: 10px"></div>
+  <div class="confetto" style="--x: 60%; --d: 22s; --de: 13s;  --w: 26px; --h: 13px"></div>
+</div>
+
+<div class="progress-bar"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="#" class="logo" data-cursor="Top">Winfly<span class="dot"></span>Ventures</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Begin a brief</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <!-- Stickers -->
+  <div class="sticker yellow" style="top: 18%; left: 5%;">Est<br>2009<br>Indore</div>
+  <div class="sticker green" style="bottom: 12%; left: 38%;" data-cursor="Hi">New<br>brief?<br>Let's go</div>
+
+  <!-- Rotating mark on right -->
+  <div class="hero-mark">
+    <svg viewBox="-100 -100 200 200" aria-hidden="true">
+      <defs>
+        <path id="cp" d="M 0,-82 a 82,82 0 1,1 0,164 a 82,82 0 1,1 0,-164" fill="none"/>
+      </defs>
+      <text>
+        <textPath href="#cp">WINFLY VENTURES · EVENTS OF CONSEQUENCE · EST 2009 · </textPath>
+      </text>
+    </svg>
+    <div class="core">W</div>
+  </div>
+
+  <div class="hero-top">
+    <div class="hero-tag"><span class="pulse"></span> Live · <span id="clock">--:--:--</span> IST</div>
+    <p class="hero-side">A senior-led practice for the Government of India and the country's largest private institutions.</p>
+  </div>
+
+  <h1>
+    Creative <span class="red">studio</span><br>
+    for events that <span class="italic">matter,</span><br>
+    nation<span class="blue">wide.</span>
+  </h1>
+
+  <div class="hero-meta">
+    <div data-cursor="Read"><span>Discipline</span><strong>Event Production</strong></div>
+    <div data-cursor="Read"><span>Based</span><strong>Indore, India</strong></div>
+    <div data-cursor="Read"><span>Established</span><strong>2009</strong></div>
+    <div data-cursor="Read"><span>Selected</span><strong>G20 · BSE · ISRO</strong></div>
+  </div>
+</section>
+
+<!-- Yellow ticker -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span><i class="t-dot"></i> Now producing — Q3 2026</span>
+    <span><i class="t-dot"></i> Live from Indore · GMT+5:30</span>
+    <span><i class="t-dot"></i> Accepting 2026 briefs</span>
+    <span><i class="t-dot"></i> 17 yrs · 800+ events · 14 heads of state</span>
+    <span><i class="t-dot"></i> Senior-led · By appointment only</span>
+    <span><i class="t-dot"></i> Now producing — Q3 2026</span>
+    <span><i class="t-dot"></i> Live from Indore · GMT+5:30</span>
+    <span><i class="t-dot"></i> Accepting 2026 briefs</span>
+    <span><i class="t-dot"></i> 17 yrs · 800+ events · 14 heads of state</span>
+    <span><i class="t-dot"></i> Senior-led · By appointment only</span>
+  </div>
+</div>
+
+<!-- Big bold marquee -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>State Functions</span>
+    <span>Diplomatic</span>
+    <span>Investor Days</span>
+    <span>Bilateral Summits</span>
+    <span>Product Launches</span>
+    <span>PSU Conclaves</span>
+    <span>AGMs</span>
+    <span>State Functions</span>
+    <span>Diplomatic</span>
+    <span>Investor Days</span>
+    <span>Bilateral Summits</span>
+    <span>Product Launches</span>
+    <span>PSU Conclaves</span>
+    <span>AGMs</span>
+  </div>
+</div>
+
+<!-- Pinned scaling statement -->
+<section class="statement">
+  <div class="statement-pin">
+    <h2>
+      We don't<br>do <span class="italic">events.</span><br>
+      We <span class="hl">make rooms.</span>
+    </h2>
+  </div>
+</section>
+
+<!-- Featured work — drag scroll -->
+<div class="work-section" id="work">
+  <div class="section-num reveal">01 / Featured Work</div>
+  <div class="work-head reveal">
+    <h2>Some <span class="red">rooms</span> we are<br><span class="italic">permitted</span> to name.</h2>
+    <a class="work-hint" href="#"><span class="dot"></span>Drag · Scroll · 08 Mandates</a>
+  </div>
+  <div class="work-strip">
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-1"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>The Bharat Investment Summit</h3>
+          <span>Ministry of Finance · 2024 · 2,400 Delegates</span>
+        </div>
+        <span class="work-tag tag-red">Govt</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-2"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>G20 Sherpa Track</h3>
+          <span>New Delhi · 2023 · 19 Delegations</span>
+        </div>
+        <span class="work-tag tag-blue">Diplo</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-6"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>Reliance AGM</h3>
+          <span>Jio World · 2024 · 11M Concurrent</span>
+        </div>
+        <span class="work-tag tag-yellow">Corp</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-3"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>Chandrayaan Reception</h3>
+          <span>Rashtrapati Bhavan · 2023</span>
+        </div>
+        <span class="work-tag tag-red">Govt</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-4"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>Mahindra BE.6 Reveal</h3>
+          <span>Yelahanka Air Base · 2024</span>
+        </div>
+        <span class="work-tag tag-green">Launch</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-7"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>Tata Centennial Gala</h3>
+          <span>Bombay House · 2023</span>
+        </div>
+        <span class="work-tag tag-yellow">Corp</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-5"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>India Energy Week</h3>
+          <span>Goa · 2024 · 16,000 Delegates</span>
+        </div>
+        <span class="work-tag tag-blue">Conf</span>
+      </div>
+    </a>
+    <a href="#" class="work-card" data-cursor="View">
+      <div class="work-img img-8"></div>
+      <div class="work-info">
+        <div class="work-info-l">
+          <h3>BSE @ 150</h3>
+          <span>NSE Hall · 2024</span>
+        </div>
+        <span class="work-tag tag-red">Govt</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Stats — RED -->
+<div class="stats">
+  <div class="section-num">02 / By the numbers</div>
+  <div class="stats-grid">
+    <div class="stat" data-cursor="Read">
+      <div class="stat-num" data-target="17" data-suffix="+">0</div>
+      <div class="stat-label">Years Operating</div>
+    </div>
+    <div class="stat" data-cursor="Read">
+      <div class="stat-num" data-target="800" data-suffix="+">0</div>
+      <div class="stat-label">Events Delivered</div>
+    </div>
+    <div class="stat" data-cursor="Read">
+      <div class="stat-num" data-target="42" data-suffix="">0</div>
+      <div class="stat-label">Cities Operated</div>
+    </div>
+    <div class="stat" data-cursor="Read">
+      <div class="stat-num" data-target="14" data-suffix="">0</div>
+      <div class="stat-label">Heads of State Hosted</div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services-section" id="services">
+  <div class="section-num reveal">03 / Services</div>
+  <div class="services">
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">01</div>
+      <h3>Government<br>& State</h3>
+      <p>Bilateral summits, ministerial conclaves, foundation ceremonies. Protocol-fluent.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">02</div>
+      <h3>Corporate<br>& Investor</h3>
+      <p>AGMs, board offsites, investor days, earnings calls.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">03</div>
+      <h3>Diplomatic<br>& Embassy</h3>
+      <p>National Day events, head-of-mission receptions, trade delegations.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">04</div>
+      <h3>Conferences<br>& Conclaves</h3>
+      <p>Multi-day flagship summits — economic, scientific, policy.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">05</div>
+      <h3>Product<br>& Brand Launches</h3>
+      <p>Concept-led launches for marquee brands. Story first.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service reveal" data-cursor="More">
+      <div class="service-num">06</div>
+      <h3>PSU<br>& Defence</h3>
+      <p>Commissioning ceremonies, jubilees, stakeholder events.</p>
+      <div class="service-arrow">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial — sticky note -->
+<section class="testimonial-section" id="testimonials">
+  <div class="container">
+    <div class="section-num reveal">04 / In their words</div>
+    <div class="testimonial reveal">
+      <blockquote>They produced a state visit reception attended by three heads of government. The brief was complex, the timeline unforgiving. Winfly Ventures treated every requirement as a non-event. That is the highest compliment we can give.</blockquote>
+      <cite>
+        <span class="t-avatar"></span>
+        <div>
+          <div>Joint Secretary</div>
+          <div style="font-weight: 500; font-size: .72rem; opacity: .7; margin-top: .2rem;">Ministry of External Affairs · Govt of India</div>
+        </div>
+      </cite>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="section-num reveal">05 / About</div>
+    <div class="about">
+      <div class="about-text reveal">
+        <h2>A studio <span class="red">built</span><br>on <span class="italic">standing</span><br>in the room.</h2>
+        <p>Founded in 2009 in Indore, Winfly Ventures has grown into a senior-led practice with thirty-eight people working across India.</p>
+        <p>Every assignment is led by a partner. Every deliverable is reviewed by two. Vendors are ours, never the client's. The 0500 phone call is ours.</p>
+        <p>Most of our best work is not on this site. Government and listed corporate clients require it.</p>
+      </div>
+      <div class="about-img reveal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 class="reveal">A brief, a date,<br>a <span class="red">room</span> to <span class="italic">fill.</span></h2>
+  <a href="mailto:mandate@winflyventures.com" class="cta-button reveal">
+    Begin a Mandate
+    <span class="arrow">↗</span>
+  </a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-tag">Winfly<span class="dot"></span>Ventures</div>
+      <p class="footer-blurb">A senior-led event production studio working with the Government of India and the country's largest private institutions.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li>Indore, India</li>
+        <li>Madhya Pradesh 452001</li>
+        <li>Mon — Sat · 0930 IST</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:mandate@winflyventures.com">mandate@winflyventures.com</a></li>
+        <li><a href="mailto:press@winflyventures.com">press@winflyventures.com</a></li>
+        <li>+91 22 4000 0000</li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-mark">Winfly <span class="italic red">Ventures</span></div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Winfly Ventures Pvt. Ltd.</div>
+    <div>Crafted in Indore</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
