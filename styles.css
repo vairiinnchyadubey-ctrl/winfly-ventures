@@ -98,11 +98,11 @@ a { color: inherit; text-decoration: none; cursor: none; }
 }
 .brick {
   position: absolute;
-  top: -30px;
+  top: -20px;
   left: var(--x, 50%);
-  width: var(--w, 22px);
-  height: var(--h, 11px);
-  border: 1.5px solid var(--ink);
+  width: var(--w, 14px);
+  height: var(--h, 7px);
+  border: 1px solid var(--ink);
   animation: brick-fall var(--d, 18s) linear infinite;
   animation-delay: var(--de, 0s);
   will-change: transform, opacity;
@@ -369,29 +369,7 @@ section { padding: 6rem 1.8rem; }
   to { transform: rotate(360deg); }
 }
 
-/* Wobble on hero accent word */
-.hero h1 .accent {
-  display: inline-block;
-  animation: wobble 6s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-@keyframes wobble {
-  0%, 100% { transform: rotate(0); }
-  25%      { transform: rotate(-1.5deg); }
-  75%      { transform: rotate(1.5deg); }
-}
-
-/* Jiggle on hover for cap arrow */
-.cap:hover .cap-arrow {
-  animation: jiggle .55s ease-out;
-}
-@keyframes jiggle {
-  0%   { transform: rotate(-45deg) translate(0, 0); }
-  25%  { transform: rotate(-45deg) translate(2px, -2px); }
-  50%  { transform: rotate(-45deg) translate(-2px, 2px); }
-  75%  { transform: rotate(-45deg) translate(2px, -2px); }
-  100% { transform: rotate(-45deg) translate(0, 0); }
-}
+/* (wobble + jiggle removed — keeping motion minimal) */
 
 /* Wavy SVG underline (data URI) */
 .wavy {
@@ -729,20 +707,7 @@ section { padding: 6rem 1.8rem; }
 }
 .cap:nth-child(3n) { border-right: none; }
 .cap:nth-last-child(-n+3) { border-bottom: none; }
-.cap::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255, 64, 64, 0.4), transparent 50%);
-  top: var(--cy, 50%);
-  left: var(--cx, 50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity .35s ease;
-  pointer-events: none;
-}
-.cap:hover::before { opacity: 1; }
+/* spotlight removed — minimal interaction */
 .cap:hover { background: var(--red); color: var(--cream); }
 .cap:hover .cap-num { color: var(--yellow); }
 .cap:hover .cap-arrow { background: var(--yellow); color: var(--ink); transform: rotate(-45deg); }
