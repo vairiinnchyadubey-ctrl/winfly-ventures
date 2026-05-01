@@ -338,11 +338,65 @@ section { padding: 6rem 1.8rem; }
   z-index: 5;
   transition: transform .3s ease;
 }
-.sticker:hover { transform: scale(1.1) rotate(-15deg) !important; }
+.sticker:hover { transform: scale(1.12) rotate(-12deg) !important; animation-play-state: paused; }
 @keyframes sticker-spin {
   from { transform: rotate(-8deg); }
   50%  { transform: rotate(8deg); }
   to   { transform: rotate(-8deg); }
+}
+
+/* Sticker variants */
+.sticker.red {
+  background: var(--red);
+  color: var(--cream);
+  box-shadow: 6px 6px 0 var(--ink);
+  animation: sticker-bounce 5s ease-in-out infinite;
+}
+.sticker.cobalt {
+  background: var(--cobalt);
+  color: var(--cream);
+  box-shadow: 6px 6px 0 var(--yellow);
+  animation: sticker-spin-slow 22s linear infinite;
+}
+@keyframes sticker-bounce {
+  0%, 100% { transform: rotate(8deg) translateY(0); }
+  50%      { transform: rotate(-8deg) translateY(-12px); }
+}
+@keyframes sticker-spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* Wobble on hero accent word */
+.hero h1 .accent {
+  display: inline-block;
+  animation: wobble 6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  25%      { transform: rotate(-1.5deg); }
+  75%      { transform: rotate(1.5deg); }
+}
+
+/* Jiggle on hover for cap arrow */
+.cap:hover .cap-arrow {
+  animation: jiggle .55s ease-out;
+}
+@keyframes jiggle {
+  0%   { transform: rotate(-45deg) translate(0, 0); }
+  25%  { transform: rotate(-45deg) translate(2px, -2px); }
+  50%  { transform: rotate(-45deg) translate(-2px, 2px); }
+  75%  { transform: rotate(-45deg) translate(2px, -2px); }
+  100% { transform: rotate(-45deg) translate(0, 0); }
+}
+
+/* Wavy SVG underline (data URI) */
+.wavy {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8'%3E%3Cpath d='M 0 4 Q 7.5 0 15 4 T 30 4 T 45 4 T 60 4' stroke='%23ff4040' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 60px 8px;
+  padding-bottom: 10px;
 }
 
 /* ---------- Hero ---------- */
@@ -554,7 +608,7 @@ section { padding: 6rem 1.8rem; }
   gap: 3rem;
   align-items: center;
   white-space: nowrap;
-  animation: scroll 32s linear infinite;
+  animation: scroll 75s linear infinite;
   width: max-content;
   font-family: 'Space Grotesk', sans-serif;
   font-size: .82rem;
@@ -590,7 +644,7 @@ section { padding: 6rem 1.8rem; }
   display: flex;
   gap: 3rem;
   white-space: nowrap;
-  animation: scroll 50s linear infinite;
+  animation: scroll 110s linear infinite;
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.6rem, 4.5vw, 3.6rem);
   font-weight: 700;
@@ -968,7 +1022,7 @@ section { padding: 6rem 1.8rem; }
   display: flex;
   gap: 3rem;
   align-items: center;
-  animation: scroll 60s linear infinite;
+  animation: scroll 130s linear infinite;
   width: max-content;
 }
 .clients-track:hover { animation-play-state: paused; }
