@@ -100,8 +100,8 @@ a { color: inherit; text-decoration: none; cursor: none; }
   position: absolute;
   top: -20px;
   left: var(--x, 50%);
-  width: var(--w, 14px);
-  height: var(--h, 7px);
+  width: var(--w, 8px);
+  height: var(--h, 4px);
   border: 1px solid var(--ink);
   animation: brick-fall var(--d, 18s) linear infinite;
   animation-delay: var(--de, 0s);
