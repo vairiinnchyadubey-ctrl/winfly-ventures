@@ -27,7 +27,14 @@
       "Bash(curl -s -o /dev/null -w \"html: %{http_code}\\\\n\" http://localhost:3000/)",
       "Bash(curl -s -o /dev/null -w \"css:  %{http_code}\\\\n\" http://localhost:3000/styles.css)",
       "Bash(curl -s -o /dev/null -w \"js:   %{http_code}\\\\n\" http://localhost:3000/script.js)",
-      "Bash(curl -s https://event-management-six-delta.vercel.app/styles.css)"
+      "Bash(curl -s https://event-management-six-delta.vercel.app/styles.css)",
+      "Bash(curl -s -o /tmp/idx.html -w \"%{http_code}\\\\n%{size_download}\\\\n\" https://event-management-six-delta.vercel.app/)",
+      "Read(//tmp/**)",
+      "Bash(kill %1)",
+      "Bash(jobs -l)",
+      "Bash(pkill -f \"until curl\")",
+      "WebSearch",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }

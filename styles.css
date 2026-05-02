@@ -901,7 +901,7 @@ section { padding: 6rem 1.8rem; }
 }
 .stat:hover { padding-left: 1rem; transform: translateY(-6px); }
 .stat:last-child { border-right: none; }
-.stat-num {
+.stat-num, .stat-pillar {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: clamp(2.8rem, 7vw, 6.5rem);
@@ -909,6 +909,7 @@ section { padding: 6rem 1.8rem; }
   letter-spacing: -.05em;
   color: var(--cream);
 }
+.stat-pillar { font-size: clamp(1.6rem, 3.5vw, 3.2rem); }
 .stat-num em { font-style: normal; color: var(--yellow); }
 .stat-label {
   font-family: 'Space Grotesk', sans-serif;
