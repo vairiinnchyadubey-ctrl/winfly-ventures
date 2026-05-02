@@ -682,6 +682,100 @@ section { padding: 6rem 1.8rem; }
   border-radius: 4px;
 }
 
+/* ---------- Principal / Founder ---------- */
+.principal {
+  background: var(--bg-2);
+  padding: 7rem 1.8rem;
+  border-bottom: 1px solid var(--line);
+}
+.principal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.principal-photo { position: relative; }
+.placeholder-photo {
+  aspect-ratio: 4/5;
+  background:
+    radial-gradient(ellipse at 30% 25%, rgba(201, 169, 97, 0.45), transparent 55%),
+    linear-gradient(135deg, var(--bg-3) 0%, var(--bg) 100%);
+  border: 1px solid var(--line);
+}
+.photo-tag {
+  margin-top: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .76rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  font-weight: 500;
+}
+.principal-text h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.8vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  color: var(--fg-bright);
+  margin-bottom: 2rem;
+}
+.principal-text h2 .accent { color: var(--accent-hi); }
+.principal-bio {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--fg);
+  margin-bottom: 1.2rem;
+  max-width: 620px;
+}
+.principal-bio .accent { color: var(--accent-hi); font-weight: 500; }
+.principal-meta {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.8rem 0;
+}
+.principal-meta li span {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+  margin-bottom: .4rem;
+  font-weight: 500;
+}
+.principal-meta strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: .92rem;
+  color: var(--fg-bright);
+  letter-spacing: -.005em;
+}
+.principal-link {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--accent-hi);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+  display: inline-block;
+  transition: color .3s ease, border-color .3s ease;
+}
+.principal-link:hover { color: var(--fg-bright); border-color: var(--fg-bright); }
+@media (max-width: 900px) {
+  .principal { padding: 4rem 1.2rem; }
+  .principal-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .principal-meta { grid-template-columns: 1fr; gap: 1rem; }
+}
+
 /* ---------- Capabilities ---------- */
 .cap-grid {
   display: grid;
